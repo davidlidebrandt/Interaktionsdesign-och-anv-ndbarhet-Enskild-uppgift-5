@@ -32,5 +32,5 @@ password.addEventListener("change", (event)=> {
     
     passwordIndicator.classList.remove("green-text");
     passwordIndicator.classList.add("red-text");
-    passwordIndicator.textContent = "Weak password, must be at least 8 characters, contain a number and special character";
+    passwordIndicator.textContent = "Weak password, should be at least 8 characters, contain a number and special character";
 });
