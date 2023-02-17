@@ -1,16 +1,19 @@
 const signUpButton = document.querySelector(".signUpButton");
 const userName = document.querySelector("#user_name");
+const fullName = document.querySelector("#name");
 const password = document.querySelector("#password");
 const email = document.querySelector("#email");
 const passwordIndicator = document.querySelector(".password_indicator");
 
 function submitSignUp() {
   alert(
-    `Welcome ${userName.value} with email ${email.value} and password ${password.value}, thank you for signing up.`
+    `Welcome ${fullName.value} with username ${userName.value}, email ${email.value} and password ${password.value}, thank you for signing up.`
   );
   userName.value = "";
+  fullName.value = "";
   password.value = "";
   email.value = "";
+  passwordIndicator.textContent = "";
 }
 
 signUpButton.addEventListener("click", (event) => {
