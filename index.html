@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+    <div class="nav-wrappe">
+      <nav>
+        <ul class="container">
+          <li class="active"><a href="index.html">Login</a></li>
+          <li><a href="sign_up.html">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <form class="col s12 loginForm">
+          <h3>Log In</h3>
+          <div class="row">
+            <div class="input-field col s6">
+              <input
+                placeholder="Placeholder"
+                id="full_name"
+                type="text"
+                name="full_name"
+                class="validate"
+              />
+              <label for="full_name">Full Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" name="password" class="validate" />
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" name="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <button
+            class="btn waves-effect waves-light loginButton"
+            type="submit"
+            name="action"
+          >
+            Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+  </body>
+</html>
