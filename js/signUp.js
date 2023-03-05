@@ -1,4 +1,4 @@
-const signUpButton = document.querySelector(".signUpButton");
+const signUpForm = document.querySelector(".signUpForm");
 const userName = document.querySelector("#user_name");
 const fullName = document.querySelector("#name");
 const password = document.querySelector("#password");
@@ -16,7 +16,7 @@ function submitSignUp() {
   passwordIndicator.textContent = "";
 }
 
-signUpButton.addEventListener("click", (event) => {
+signUpForm.addEventListener("submit", (event) => {
   event.preventDefault();
   submitSignUp();
 });
@@ -25,15 +25,16 @@ password.addEventListener("change", (event)=> {
     const containsNumbers = /(?=.*[0-9])/.test(password.value);
     const containsSpecialCharacters = /(?=.*[!@#$%^&*])/.test(password.value);
     const longEnoughPassword = password.value.length > 7;
+    passwordIndicator.classList.add("mb-2");
     
     if(longEnoughPassword && containsNumbers && containsSpecialCharacters) {
         passwordIndicator.textContent = "Strong password";
-        passwordIndicator.classList.add("green-text");
-        passwordIndicator.classList.remove("red-text");
+        passwordIndicator.classList.add("text-green-400");
+        passwordIndicator.classList.remove("text-red-400");
         return;
     }
     
-    passwordIndicator.classList.remove("green-text");
-    passwordIndicator.classList.add("red-text");
+    passwordIndicator.classList.remove("text-green-400");
+    passwordIndicator.classList.add("text-red-400");
     passwordIndicator.textContent = "Weak password, should be at least 8 characters, contain a number and special character";
 });

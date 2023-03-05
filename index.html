@@ -8,64 +8,54 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="css/materialize.min.css"
-      media="screen,projection"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
-  <body>
-    <header>
-    <div class="nav-wrappe">
-      <nav>
-        <ul class="container">
+  <body class="bg-blue-100">
+    <header class="text-lg text-blue-800 font-semibold bg-blue-300 py-4">
+      <nav class="px-3">
+        <ul class="flex flex-row gap-x-4">
           <li class="active"><a href="index.html">Login</a></li>
           <li><a href="sign_up.html">Sign Up</a></li>
         </ul>
       </nav>
-    </div>
     </header>
-    <div class="container">
-      <div class="row">
-        <form class="col s12 loginForm">
-          <h3>Log In</h3>
-          <div class="row">
-            <div class="input-field col s12">
-              <input
-                id="user_name"
-                type="text"
-                name="user_name"
-                class="validate"
-              />
-              <label for="user_name">Username</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="password" type="password" name="password" class="validate" />
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" name="email" class="validate" />
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <button
-            class="btn waves-effect waves-light loginButton"
-            type="submit"
-            name="action"
-          >
-            Submit
-            <i class="material-icons right">send</i>
-          </button>
-        </form>
-      </div>
-    </div>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <main class="p-5 grid place-items-center">
+      <form class="w-80 max-w-xl text-blue-800 loginForm">
+        <h3 class="font-bold text-2xl mb-4">Log In</h3>
+        <label class="block mt-2 font-semibold" for="user_name">Username</label>
+        <input
+          id="user_name"
+          type="text"
+          name="user_name"
+          class="shadow rounded block w-full"
+          required
+        />
+        <label class="block mt-2 font-semibold" for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          class="block w-full"
+          required
+        />
+        <label class="block mt-2 font-semibold" for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          class="block w-full"
+          required
+        />
+        <button
+          class="block text-blue-100 rounded bg-blue-600 px-5 py-2 mt-6 loginButton"
+          type="submit"
+          name="action"
+        >
+          Submit
+        </button>
+      </form>
+    </main>
+    <script src="js/login.js"></script>
   </body>
 </html>
